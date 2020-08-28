@@ -1,0 +1,220 @@
+.news
+	position: relative
+	z-index: 9
+	&__inner
+		display: flex
+		justify-content: space-between
+		align-items: stretch
+		+screen('max', 1023)
+			display: block
+	&__elems
+		display: flex
+		justify-content: space-between
+		align-items: stretch
+		margin-top: 20px
+		+screen('max', 767)
+			display: block
+	&__elem
+		border: 1px solid $color-1
+		background-color: #ffffff
+		cursor: pointer
+		transition: .5s ease-in-out
+		width: 32%
+		max-width: 392px
+		position: relative
+		&:after
+			content: ''
+			width: calc(100% + 2px)
+			height: 7px
+			bottom: 0
+			left: -1px
+			background: $color-1
+			opacity: 0
+			transition: .5s ease
+			position: absolute
+		&:hover
+			border: 1px solid $color-1
+			&:after
+				opacity: 1
+		+screen('max', 1023)
+			width: 49%
+		+screen('max', 767)
+			width: 100%
+			margin-bottom: 10px
+		&:last-of-type
+			+screen('max', 1023)
+				display: none
+	&__item
+		border: 1px solid $color-1
+		background-color: #ffffff
+		display: flex
+		justify-content: space-between
+		transition: .5s ease-in-out
+		cursor: pointer
+		margin-bottom: 10px
+		position: relative
+		+screen('max', 767)
+			flex-wrap: wrap-reverse
+		&:last-of-type
+			margin-bottom: 0
+		&:after
+			content: ''
+			width: calc(100% + 2px)
+			height: 7px
+			bottom: -6px
+			left: -1px
+			background: $color-1
+			opacity: 0
+			transition: .5s ease
+			position: absolute
+		&:hover
+			border: 1px solid $color-1
+			&:after
+				opacity: 1
+	&__img
+		width: 100%
+		height: 270px
+		object-fit: cover
+	&__pic
+		object-fit: cover
+		flex-shrink: 0
+		+screen('max', 767)
+			width: 100%
+	&__content
+		padding: 30px 35px
+		box-sizing: border-box
+		display: flex
+		color: $color-1
+		flex-flow: column
+		justify-content: space-between
+		align-items: baseline
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+			display: block
+			width: 70%
+		+screen('max', 767)
+			padding: 20px
+	&__title
+		color: $color-1
+		width: 100%
+	&__date
+		opacity: 0.5
+		+fs(12px)
+		width: 100%
+	&__list
+		max-width: 900px
+		width: 80%
+	&__sidebar
+		max-width: 290px
+		margin-left: 12px
+		background: rgba(0,58,128, .3)
+		box-sizing: border-box
+		padding: 40px 30px
+		width: 34%
+		flex-shrink: 0
+		+screen('max', 1280)
+			padding: 30px 20px
+			width: 27%
+			margin-right: 5%
+		+screen('max', 1023)
+			display: none
+		h3
+			font-weight: 400
+			padding-top: 0
+	&__more
+		margin: 20px auto
+		display: block
+		max-width: 180px
+.news-single
+	padding-top: 65px
+	background-image: url(../images/layer-news-single.png)
+	background-position-y: 3%
+	background-repeat: no-repeat
+	background-size: contain
+	+screen('max', 1023)
+		margin-bottom: 150px
+	+screen('max', 767)
+		background-position-y: 45px
+		padding-top: 65px
+		margin-bottom: 0
+	&__head
+		text-align: center
+		padding-top: 3%
+		+screen('max', 767)
+			padding: 6% 0 0
+	&__title
+		max-width: 980px
+		width: 100%
+		line-height: 44px
+		margin: 10px auto
+		+screen('max', 767)
+			line-height: 1.25
+			margin: 0
+			+fs(26px)
+			font-weight: normal
+			padding: 10px
+			box-sizing: border-box
+	&__date
+		opacity: 0.5
+		+fs(12px)
+		margin-bottom: 25px
+		+screen('max', 767)
+			margin-bottom: 15px
+	&__body
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 90%
+			background: $color-1
+			top: 0
+			left: 0
+			z-index: -1
+	&__content
+		max-width: 980px
+		margin: -90px auto 0
+		box-sizing: border-box
+		padding: 80px 100px
+		border: 1px solid $color-1
+		background-color: #ffffff
+		position: relative
+		width: 100%
+		z-index: 9
+		+screen('max', 1023)
+			padding: 50px
+			margin-top: -20px
+		+screen('max', 767)
+			padding: 30px 15px
+			margin-top: -10px
+	&__pic
+		width: 100%
+		min-height: 150px
+		display: block
+		img
+			width: 100%
+.control
+	max-width: 980px
+	width: 100%
+	margin: 25px auto 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+	&__btn
+		background: $color-1
+		color: $color-1
+		+fs(14px)
+		text-transform: uppercase
+		padding: 12px 15px
+		box-sizing: border-box
+		transition: .5s ease
+		+screen('max', 767)
+			+fs(13px)
+			padding: 10px
+		&:hover
+			background-color: $color-1
+		&_blue
+			background: $color-1
+			color: #ffffff
+			&:hover
+				background-color: $color-3
+				color: #fff
