@@ -1,0 +1,86 @@
+.header
+	padding: 30px 125px
+	box-sizing: border-box
+	&__inner
+		display: flex
+		justify-content: space-between
+	&__logo
+		color: #222222
+		letter-spacing: 0.48px
+		font-size: 48px
+	&__list
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__item
+		padding: 0 20px
+		margin-bottom: 0
+		position: relative
+		&:before
+			display: none
+		.dropdown
+			position: absolute
+			min-width: 300px
+			height: 0
+			overflow: hidden
+			margin-top: 10px
+		li
+			padding-left: 0
+			margin-bottom: 5px
+			&::before
+				display: none
+			a
+				color: $color-1
+				+fs(15px)
+				text-transform: uppercase
+				letter-spacing: 0.75px
+				&.active
+					color: $color-2
+	&__link
+		color: #222222
+		text-transform: uppercase
+		letter-spacing: 0.8px
+		display: block
+		&.active
+			color: $color-2
+	&__control
+		display: flex
+		align-items: center
+	&__personal
+		display: flex
+		width: 30px
+		height: 30px
+		background-color: $color-2
+		justify-content: center
+		align-items: center
+		border-radius: 1000%
+		svg
+			width: 17px
+			height: 17px
+			fill: #fff
+			position: relative
+			top: -1px
+.lang
+	position: relative
+	&__item
+		padding-left: 0
+		display: none
+		margin-bottom: 0
+		margin-left: 20px
+		&:before
+			display: none
+		&.active
+			display: block
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				left: 130%
+				top: 50%
+				transform: translateY(-50%)
+				display: block
+				height: 6px
+				width: 6px
+				background-image:  url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAASElEQVQYV2NUUlI6z8DAYMCACi4wqqmpKf358+cMAwODIFTuPQsLiwkjiKOkpOTFwMCwBSrhc+/evW1gCahkI4i+d+9ePYgGAPJ4EM58yz7ZAAAAAElFTkSuQmCC)
+				background-position: center
+				background-repeat: no-repeat

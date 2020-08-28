@@ -1,0 +1,10 @@
+include ../static/pug/_global
+<!DOCTYPE html>
+html(lang="ru")
+	+head('Новости')
+	body
+		main.page
+			+header()
+			+newsall()
+			+footer()
+		include ../static/pug/_scripts

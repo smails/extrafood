@@ -1,0 +1,74 @@
+h1, .heading-1
+	+fs(70px)
+	color: $color-1
+	font-weight: 400
+	text-transform: uppercase
+	font-family: $font-heading
+h2, .heading-2
+	+fs(38px)
+	color: $color-1
+	text-transform: uppercase
+	letter-spacing: 0.38px
+	font-family: $font-heading
+h3, .heading-3
+	+fs(22px)
+	color: $color-1
+	font-family: $font-heading
+	letter-spacing: 1.1px
+h6, .heading-6
+	+fs(15px)
+	color: $color-1
+	text-transform: uppercase
+button
+	font-family: $font-family
+.text
+	line-height: 24px
+	p
+		margin-bottom: 15px
+	h3
+		margin: 15px 0
+		font-weight: 400
+		+screen('max', 767)
+			margin: 0
+	h4
+		+fs(18px)
+		padding: 10px 0
+		font-weight: 400
+		+screen('max', 767)
+			margin: 0
+	blockquote
+		padding: 15px 10px 15px 30px
+		font-style: italic
+		+fs(18px)
+		border-left: 6px solid $color-1
+		margin: 15px 0
+		p
+			margin-bottom: 10px
+			opacity: .5
+			&:first-of-type
+				opacity: 1
+			&:last-of-type
+				margin-bottom: 0
+ul
+	li
+		position: relative
+		padding-left: 20px
+		&:before
+			content: ''
+			width: 6px
+			height: 6px
+			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAE0lEQVQYV2NksGpoYMACGAdSAgBu+wdjMLJQMgAAAABJRU5ErkJggg==)
+			background-position: center
+			background-repeat: no-repeat
+			position: absolute
+			left: 0
+			top: 10px
+ol
+.text-uppercase
+	text-transform: uppercase
+.text-right
+	text-align: right
+.text-center
+	text-align: center
+.text-underline
+	text-decoration: underline

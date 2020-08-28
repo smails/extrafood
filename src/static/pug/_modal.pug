@@ -1,0 +1,35 @@
++b.modal
+	+e.container
+		+e.BUTTON.close
+		+e.FORM.form
+			+e.H3.title Обратная связь
+			+e.P.subtitle Оставьте ваши данные и мы с вами свяжемся в ближайшее время
+			+b.group
+				+e.SPAN.name Ваше имя*
+				+e.INPUT.field.required(type="text")
+			+b.group
+				+e.SPAN.name Телефон
+				+e.INPUT.field.required(type="tel" name="phone")
+			+b.group
+				+e.SPAN.name E-mail*
+				+e.INPUT.field.required(type="email" )
+			+b.group
+				+e.SPAN.name Сообщение
+				+e.INPUT.field(type="text")
+			+b.form-add
+				ul
+				label.add-file
+					input(type="file")
+					span.btn-add
+						span.add-file__icon
+						span Прикрепить файл
+			+b.LABEL.checkbox_polit
+				+e.INPUT.hidden(type="checkbox")
+				+e.SPAN.text Я выражаю 
+					a(href="/legal.html") согласие на обработку моих персональных данных компанией 
+					| в целях обработки данных для передачи рекламной информации по предоставленному адресу электронной почты или номеру телефона. Предоставление данных является добровольным решением. 
+			+e.control
+				+e.captch
+					img(src="/images/cap.jpg", alt="")
+				+e.BUTTON.submit.btn Отправить
+			+e.sign *Обязательные поля

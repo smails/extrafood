@@ -1,0 +1,10 @@
+include ../static/pug/_global
+<!DOCTYPE html>
+html(lang="ru")
+	+head('404')
+	body
+		main.page-error
+			+header()
+			article.page-error__text Страница с таким адресом не существует, либо была удалена
+			a(href="/").page-error__btn Перейти на Главную
+		include ../static/pug/_scripts

@@ -1,0 +1,70 @@
+mixin newsall(vars)
+	+b.news.after-page-title
+		.inner.news__inner
+			.tags.mobile
+				a(href="#").tag.tag_link.tag_white 2019
+				a(href="#").tag.tag_link.tag_white 2020
+				a(href="#").tag.tag_link.tag_white 2019
+			+e.list
+				+e.A.item
+					+e.content
+						span.tag.tag_blue Новости компании
+						+e.H6.title Уважаемые клиенты! Разработано и освоено производство новых видов шинорейки (шина монтажная) № 20 и № 30
+						+e.SPAN.date 20.01.2020
+					+e.IMG.pic(src="/images/stub-news-1.png")
+				+e.A.item
+					+e.content
+						span.tag.tag_blue Новости компании
+						+e.H6.title Компания НЗМИ информирует своих клиентов о возможности размещения заявок
+						+e.SPAN.date 20.01.2020
+					+e.IMG.pic(src="/images/stub-news-2.png")
+				+e.A.item
+					+e.content
+						span.tag.tag_blue Новости компании
+						+e.H6.title Искусство медиапланирования настроено позитивно.
+						+e.SPAN.date 20.01.2020
+					+e.IMG.pic(src="/images/stub-news-3.png")
+				+e.A.item
+					+e.content
+						span.tag.tag_blue Новости компании
+						+e.H6.title Уважаемые клиенты! Разработано и освоено производство новых видов шинорейки (шина монтажная) № 20 и № 30
+						+e.SPAN.date 20.01.2020
+					+e.IMG.pic(src="/images/stub-news-1.png")
+				+e.A.item
+					+e.content
+						span.tag.tag_blue Новости компании
+						+e.H6.title Компания НЗМИ информирует своих клиентов о возможности размещения заявок
+						+e.SPAN.date 20.01.2020
+					+e.IMG.pic(src="/images/stub-news-2.png")
+				+e.A.item
+					+e.content
+						span.tag.tag_blue Новости компании
+						+e.H6.title Искусство медиапланирования настроено позитивно.
+						+e.SPAN.date 20.01.2020
+					+e.IMG.pic(src="/images/stub-news-3.png")
+			+e.sidebar
+				.tags
+					h3 Год
+					a(href="#").tag.tag_link.tag_white 2019
+					a(href="#").tag.tag_link.active.tag_white 2020
+					a(href="#").tag.tag_link.tag_white 2019
+				.tags
+					h3 Теги
+					a(href="#").tag.tag_link.tag_white Новости компании
+					a(href="#").tag.tag_link.tag_white Новости компании
+					a(href="#").tag.tag_link.tag_white Новости компании
+					a(href="#").tag.tag_link.tag_white Новости
+	+b.pagination
+		+e.UL.list
+			+e.LI.item
+				+e.A.link(href="#") 1
+			+e.LI.item
+				+e.A.link(href="#") 2
+			+e.LI.item
+				+e.A.link(href="#").active 3
+			+e.LI.item
+				+e.A.link(href="#") 4
+			+e.LI.item
+				+e.A.link(href="#") ...
+			+e.LI.item
+				+e.A.link(href="#") 20  

@@ -1,0 +1,35 @@
+mixin header()
+	+b.HEADER.header
+		+e.inner
+			+e.A.logo(href="/")
+				p Logo
+			+e.UL.list
+				+e.LI.item
+					+e.A.link(href="#") company
+					ul.dropdown
+						li
+							a(href="#") about us
+						li
+							a(href="#") PHILOSOPHY
+				+e.LI.item
+					+e.A.link(href="#") wines
+					ul.dropdown
+						li
+							a(href="#") REgions
+						li
+							a(href="#") wines (Penedès)
+				+e.LI.item
+					+e.A.link(href="#") cellar
+				+e.LI.item
+					+e.A.link(href="#") Blog
+				+e.LI.item
+					+e.A.link(href="#") contacts
+			+e.control
+				+e.A.personal
+					svg(xmlns='http://www.w3.org/2000/svg', x='0', y='0', version='1.1', viewBox='0 0 512 512', xml:space='preserve')
+						path.st0(d='M511.8 501.6c-.7-88.2-56.5-167.7-139.3-198.3-2.7-1-5.8-.5-8.1 1.2-31.4 24-68.9 36.7-108.4 36.7s-77-12.7-108.4-36.7c-2.3-1.8-5.4-2.2-8.1-1.2-28.5 10.5-55.1 27.5-76.9 49.2C22.2 393 0 446.5 0 503.4c0 4.7 3.8 8.5 8.5 8.5h495c4.7 0 8.5-3.8 8.5-8.5 0-.6-.1-1.2-.2-1.8zm-494.6-6.7c2.1-49.1 22.3-95.1 57.3-130.2 18.9-18.9 41.8-33.9 66.4-43.7 33.6 24.5 73.3 37.4 115 37.4s81.4-12.9 115-37.4c71.7 28.4 120.3 97 123.7 173.8H17.2z')
+						path.st0(d='M255.9 324.2c89.4 0 162.1-72.7 162.1-162.1S345.3.1 255.9.1 93.8 72.8 93.8 162.2s72.7 162 162.1 162zm0-307.1c80 0 145 65.1 145 145s-65.1 145-145 145-145-65.1-145-145 65.1-145 145-145z')
+				+b.UL.lang
+					+e.LI.item.active EN
+					+e.LI.item ES
+					+e.LI.item RU
