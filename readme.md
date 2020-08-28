@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # SMMJAM project
+=======
+# AMMC project
+>>>>>>> f43ef22c65d61a32c7df2eb0fb3d0b0965ae67a2
 
 ## Dev
 #### Первый запуск

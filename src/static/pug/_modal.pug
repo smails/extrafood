@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+=======
++b.basket-open.js-open-basket
+	img(src="/icon/basket-icon.png", alt="")
+	+e.numb
++b.basket
+	+e.container
+		+e.FORM.form
+			+e.BUTTON.close закрыть
+			+e.H2.title Корзина
+			+e.UL.list#basket-list
+				p.empty Корзина пуста
+			+e.H3.caption Введите ваши данные
+				span *Обязательные поля
+			+b.group
+				+e.SPAN.name Ваше имя*
+				+e.INPUT.field.required(type="text")
+			+e.row
+				+b.group_half
+					+e.SPAN.name Телефон
+					+e.INPUT.field.required(type="tel" name="phone")
+				+b.group_half
+					+e.SPAN.name E-mail*
+					+e.INPUT.field.required(type="email" )
+			+b.LABEL.checkbox_polit
+				+e.INPUT.hidden(type="checkbox")
+				+e.SPAN.text Я выражаю 
+					a(href="/legal.html") согласие на обработку моих персональных данных компанией 
+					| в целях обработки данных для передачи рекламной информации по предоставленному адресу электронной почты или номеру телефона. Предоставление данных является добровольным решением. 
+			+e.control
+				+e.captch
+					img(src="/images/cap.jpg", alt="")
+				+e.BUTTON.submit.btn Отправить
+
+>>>>>>> f43ef22c65d61a32c7df2eb0fb3d0b0965ae67a2
 +b.modal
 	+e.container
 		+e.BUTTON.close
