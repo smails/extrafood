@@ -33,6 +33,8 @@ main
 	max-width: 1170px
 	width: 100%
 	margin: 0 auto
+	&_middle
+		max-width: 970px
 	+screen('max', 1170)
 		padding: 0 20px
 		box-sizing: border-box
@@ -225,7 +227,6 @@ main
 	color: $color-1
 
 .btn
-<<<<<<< HEAD
 	display: inline-block
 	background: $color-2
 	box-sizing: border-box
@@ -236,6 +237,7 @@ main
 	line-height: 24px
 	text-transform: uppercase
 	letter-spacing: 0.35px
+	position: relative
 	&_link
 		width: 150px
 		position: relative
@@ -244,9 +246,11 @@ main
 		align-items: center
 		&::after
 			content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAYAAADam2dgAAAAVklEQVQoU2P8////AgYGhgJGRsYPDFDw////BgYGhg2MjIwXQEKM////F2BgYJiARSFIbAFIISNIJUGFSFYoMDAwNDAyMibAxKAGHCDOJIJWgdxEjO8AoCxCH4pv0B8AAAAASUVORK5CYII=)
-			position: absolute
-=======
->>>>>>> f43ef22c65d61a32c7df2eb0fb3d0b0965ae67a2
+			display: inline-block
+			vertical-align: middle
+			margin-left: 10px
+			position: relative
+			top: -1px
 table
 
 .swiper-button-prev
@@ -294,10 +298,7 @@ table
 	justify-content: center
 	align-items: center
 	opacity: 0
-<<<<<<< HEAD
 	display: none
-=======
->>>>>>> f43ef22c65d61a32c7df2eb0fb3d0b0965ae67a2
 	&__close
 
 .up

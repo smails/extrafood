@@ -1,0 +1,22 @@
+.discover
+	&__contain
+		margin-top: 30px
+		display: flex
+		flex-flow: column
+		height: 670px
+	&__item
+		max-width: 270px
+		display: block
+		&:first-of-type
+			max-width: 570px
+			.discover__pic
+				height: 570px
+	&__pic
+		width: 100%
+		height: 270px
+		object-fit: cover
+	&__caption
+		text-transform: uppercase
+		+fs(18px)
+		letter-spacing: 0.45px
+		color: #222222

@@ -273,7 +273,6 @@ document.querySelectorAll('.group__field').forEach(function (elem) {
   });
 });
 "use strict";
-"use strict";
 
 /* eslint-disable no-mixed-operators */
 
@@ -411,7 +410,13 @@ $('.search-cart__btn-catalog-mobile').click(function () {
 
 /* eslint-disable no-unused-vars */
 var headerFix = function headerFix(scroll) {
-  document.querySelector('.header').style.transform = "translateY(".concat(scroll, "px)");
+  if (scroll > 20) {
+    document.querySelector(".header").classList.add('fix');
+  } else {
+    document.querySelector(".header").classList.remove('fix');
+  }
+
+  document.querySelector(".header").style.transform = "translateY(".concat(scroll, "px)");
 }; // eslint-disable-next-line func-names
 
 
@@ -421,5 +426,7 @@ $('.js-open-menu').click(function () {
   $('.header__menu').slideToggle();
   $('.basket-open').fadeToggle();
 });
+"use strict";
+"use strict";
 "use strict";
 "use strict";

@@ -1,7 +1,14 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 const headerFix = (scroll) => {
-  document.querySelector('.header').style.transform = `translateY(${scroll}px)`;
+  if (scroll > 20){
+    document.querySelector(".header").classList.add('fix');
+  }else{
+    document.querySelector(".header").classList.remove('fix');
+  }
+    document.querySelector(
+      ".header"
+    ).style.transform = `translateY(${scroll}px)`;
 };
 
 
