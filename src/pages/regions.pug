@@ -1,9 +1,11 @@
 include ../static/pug/_global
 <!DOCTYPE html>
 html(lang="ru")
-	+head('Продукт')
+	+head('Регионы')
 	body
 		main.page
 			+header()
+			+heading('/images/heading_wine.jpg', ["wines","regions"], 'regions')
+			+regions()
 			+footer()
 		include ../static/pug/_scripts

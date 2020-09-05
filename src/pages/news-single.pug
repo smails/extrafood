@@ -1,10 +1,11 @@
 include ../static/pug/_global
 <!DOCTYPE html>
 html(lang="ru")
-	+head('Новости')
+	+head('Новость')
 	body
 		main.page
 			+header()
+			+heading('/images/heading_blog.jpg', ["home","blog", "Article name"], 'Article name')
 			+newssingle()
 			+footer()
 		include ../static/pug/_scripts

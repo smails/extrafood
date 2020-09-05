@@ -1,22 +1,86 @@
 .discover
+	margin-top: 100px
+	+screen('max', 1023)
+		margin-top: 70px
+	+screen('max', 767)
+		margin-top: 30px
 	&__contain
 		margin-top: 30px
 		display: flex
-		flex-flow: column
+		flex-flow: column wrap
 		height: 670px
+		+screen('max', 1500)
+			height: 580px
+		+screen('max', 1023)
+			flex-flow: row wrap
+			height: auto
 	&__item
 		max-width: 270px
 		display: block
+		max-height: 320px
+		margin-bottom: 20px
+		+screen('max', 1500)
+			width: 25%
+			margin-right: 10px
+		+screen('max', 1023)
+			width: 50%
+			max-width: 50%
 		&:first-of-type
 			max-width: 570px
+			max-height: 675px
+			+screen('max', 1500)
+				width: 49%
+			+screen('max', 1023)
+				width: 100%
+				max-width: 100%
 			.discover__pic
-				height: 570px
+				height: 565px
+				+screen('max', 1500)
+					height: 480px
+				+screen('max', 1023)
+					height: 350px
+		&:hover
+			.discover__caption
+				color: #fff
+				&:before
+					height: 50px
 	&__pic
 		width: 100%
-		height: 270px
+		height: 247px
 		object-fit: cover
+		vertical-align: middle
+		+screen('max', 1500)
+			height: 206px
 	&__caption
 		text-transform: uppercase
-		+fs(18px)
+		+fs(16px)
 		letter-spacing: 0.45px
 		color: #222222
+		padding: 13px 18px
+		box-sizing: border-box
+		background: #fff
+		position: relative
+		overflow: hidden
+		&:before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 0
+			position: absolute
+			left: 0
+			top: 0
+			background: $color-2
+			transition: .5s ease
+		&::after
+			content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAYAAADam2dgAAAAVklEQVQoU2P8////AgYGhgJGRsYPDFDw////BgYGhg2MjIwXQEKM////F2BgYJiARSFIbAFIISNIJUGFSFYoMDAwNDAyMibAxKAGHCDOJIJWgdxEjO8AoCxCH4pv0B8AAAAASUVORK5CYII=)
+			display: inline-block
+			vertical-align: middle
+			margin-left: 5px
+			position: relative
+			top: -5px
+			transition: .5s ease
+			z-index: 9
+		span
+			position: relative
+			z-index: 9
+			transition: .5s ease

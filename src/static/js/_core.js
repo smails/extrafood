@@ -112,3 +112,20 @@ document.querySelectorAll('.group__field').forEach((elem) => {
     }
   });
 });
+
+const bottle = new Swiper('.bottle .swiper-container', {
+  spaceBetween: 10,
+  slidesPerView: 5,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+    },
+    1023: {
+      slidesPerView: 3,
+    },
+  },
+});

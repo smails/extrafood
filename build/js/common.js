@@ -272,6 +272,33 @@ document.querySelectorAll('.group__field').forEach(function (elem) {
     }
   });
 });
+var bottle = new Swiper('.bottle .swiper-container', {
+  spaceBetween: 10,
+  slidesPerView: 5,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  breakpoints: {
+    767: {
+      slidesPerView: 2
+    },
+    1023: {
+      slidesPerView: 3
+    }
+  }
+});
+"use strict";
+"use strict";
+
+var banner = new Swiper('.banner .swiper-container', {
+  slidesPerView: 1,
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+});
 "use strict";
 
 /* eslint-disable no-mixed-operators */
@@ -421,12 +448,48 @@ var headerFix = function headerFix(scroll) {
 
 
 $('.js-open-menu').click(function () {
-  $(this).find('.sign').toggleClass('open');
   $(this).find('.burger').toggleClass('open');
-  $('.header__menu').slideToggle();
-  $('.basket-open').fadeToggle();
+  $('.header__list').slideToggle();
+});
+$(".header__item").mouseenter(function () {
+  if ($(this).find('.dropdown').length) {
+    if ($(this).parents('.header').hasClass('fix')) {
+      $(".header__over").css({
+        height: '60px'
+      });
+    } else {
+      $(".header__over").css({
+        height: '120px'
+      });
+    }
+  } else {
+    $(".header__over").css({
+      height: '0'
+    });
+  }
+});
+$(".header__item").mouseleave(function () {
+  $(".header__over").css({
+    height: '0'
+  });
 });
 "use strict";
 "use strict";
 "use strict";
+
+$('.cls-10').click(function () {
+  $(this).addClass('active').siblings().removeClass('active');
+  $("[data-box=".concat($(this).data('item'), "]")).fadeIn().siblings().hide();
+});
 "use strict";
+
+$('.tab__link').click(function () {
+  $(this).addClass('active').siblings().removeClass('active');
+  $(this).parents('.tab').find('.tab__box').eq($(this).index()).addClass('active').siblings().removeClass('active');
+});
+"use strict";
+
+$('.tabs__link').click(function () {
+  $(this).addClass('active').siblings().removeClass('active');
+  $(this).parents('.tabs').find('.tabs__text').eq($(this).index()).addClass('active').siblings().removeClass('active');
+});

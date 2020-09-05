@@ -1,0 +1,11 @@
+include ../static/pug/_global
+<!DOCTYPE html>
+html(lang="ru")
+	+head('Вино')
+	body
+		main.page
+			+header()
+			+heading('/images/heading_wine.jpg', ["wines","wines (Penedès)"], 'wines (Penedès)')
+			+wine()
+			+footer()
+		include ../static/pug/_scripts

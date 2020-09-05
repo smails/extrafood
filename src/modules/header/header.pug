@@ -3,27 +3,29 @@ mixin header()
 		+e.inner
 			+e.A.logo(href="/")
 				p Logo
+			+e.btn-mobile.js-open-menu
+				span.burger
 			+e.UL.list
 				+e.LI.item
-					+e.A.link(href="#") company
+					+e.A.link(href="/about.html") company
 					ul.dropdown
 						li
-							a(href="#") about us
+							a(href="/about.html") about us
 						li
-							a(href="#") PHILOSOPHY
+							a(href="/philoshophia.html") PHILOSOPHY
 				+e.LI.item
-					+e.A.link(href="#") wines
+					+e.A.link(href="/wine.html") wines
 					ul.dropdown
 						li
-							a(href="#") REgions
+							a(href="/regions.html") REgions
 						li
 							a(href="#") wines (Penedès)
 				+e.LI.item
-					+e.A.link(href="#") cellar
+					+e.A.link(href="/cellar.html") cellar
 				+e.LI.item
-					+e.A.link(href="#") Blog
+					+e.A.link(href="/news.html") Blog
 				+e.LI.item
-					+e.A.link(href="#") contacts
+					+e.A.link(href="/contacts.html") contacts
 			+e.control
 				+e.A.personal
 					svg(xmlns='http://www.w3.org/2000/svg', x='0', y='0', version='1.1', viewBox='0 0 512 512', xml:space='preserve')
@@ -33,3 +35,4 @@ mixin header()
 					+e.LI.item.active EN
 					+e.LI.item ES
 					+e.LI.item RU
+		+e.over

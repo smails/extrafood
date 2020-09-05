@@ -1,0 +1,107 @@
+.wine
+	&__item
+		margin: 100px 0
+		+screen('max', 767)
+			margin: 30px 0
+		&:first-of-type
+			margin-top: 20px
+		&:nth-of-type(2n)
+			.wine__info
+				flex-flow: row-reverse
+				+screen('max', 767)
+					flex-flow: wrap
+			.wine__pic
+				margin-left: 0
+				margin-right: 15%
+				+screen('max', 1500)
+					margin-right: 5%
+				+screen('max', 1023)
+					margin-right: 0
+				+screen('max', 767)
+					margin: 0 auto
+	&__info
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		+screen('max', 767)
+			flex-wrap: wrap
+	&__content
+		max-width: 570px
+		width: 100%
+		+screen('max', 767)
+			margin-top: 10px
+	&__pic
+		max-height: 500px
+		margin-left: 15%
+		+screen('max', 1500)
+			margin-left: 5%
+		+screen('max', 1023)
+			margin-left: 0
+		+screen('max', 767)
+			order: -1
+			display: block
+			margin: 0 auto
+			height: 400px
+	&__title
+		+fs(30px)
+		color: $color-2
+	&__text
+		color: #999999
+		+fs(15px)
+	&__line
+		margin-top: 15px
+		width: 80%
+		+screen('max', 767)
+			width: 100%
+	&__caption
+		text-transform: uppercase
+		color: #222
+	&__all
+		display: block
+		margin: 0 auto
+		+screen('max', 767)
+			width: 100%
+.tabs
+	display: flex
+	margin-top: 40px
+	padding-top: 20px
+	border-top: 1px solid #d9d9d9
+	+screen('max', 767)
+		display: block
+	&__list
+		flex-shrink: 0
+		max-width: 270px
+		width: 30%
+		+screen('max', 767)
+			width: 100%
+			max-width: 100%
+	&__link
+		color: #222222
+		+fs(16px)
+		letter-spacing: 0.18px
+		text-transform: uppercase
+		border-bottom: 1px solid #d9d9d9
+		position: relative
+		padding: 20px 0
+		cursor: pointer
+		&.active
+			border-bottom: 2px solid $color-2
+		&:after
+			content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAGCAYAAAAVMmT4AAAAbElEQVQoU23NURGAIBCE4d0oXAUzGEGrYAStYgYrWIEHCljgZnCOUcY54Y3h+xeKyA4gpZQWdE4IYSIZVXWkiKwAIoDNBw+0sUNVZ9pYL/Aw53xV7INSykmyLRo007AL7Fq/fuEPf4LBQ3u7AdoXQN3tTWn8AAAAAElFTkSuQmCC)
+			position: absolute
+			top: 50%
+			right: 0
+			transform: translateY(-50%)
+	&__content
+		padding-left: 30px
+		padding-top: 10px
+		+screen('max', 767)
+			padding-left: 0
+	&__text
+		color: #999999
+		letter-spacing: 0.15px
+		line-height: 24px
+		+fs(15px)
+		display: none
+		&.active
+			display: block

@@ -1,20 +1,25 @@
 mixin discover(vars)
 	+b.discover
 		.inner
-			+e.H2.title.text-center DISCOVER THE WORLD OF WINE
+			+e.H2.title.text-center Discover the world of wine
 			+e.contain
 				+e.A.item(href="/region.html")
 					+e.IMG.pic(src="/images/regions.jpg")
-					+e.P.caption regions
+					+e.P.caption
+						span regions
 				+e.A.item(href="/blog.html")
 					+e.IMG.pic(src="/images/blog.jpg")
-					+e.P.caption blog
+					+e.P.caption
+						span blog
 				+e.A.item(href="/wines.html")
 					+e.IMG.pic(src="/images/wines.jpg")
-					+e.P.caption wines (Penedès)
+					+e.P.caption
+						span wines (Penedès)
 				+e.A.item(href="/cellar.html")
 					+e.IMG.pic(src="/images/cellar.jpg")
-					+e.P.caption cellar
+					+e.P.caption
+						span cellar
 				+e.A.item(href="/production.html")
 					+e.IMG.pic(src="/images/production.jpg")
-					+e.P.caption production
+					+e.P.caption
+						span production

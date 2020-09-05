@@ -1,0 +1,117 @@
+.contacts
+	&__inner
+		display: flex
+		justify-content: space-between
+		align-items: center
+		+screen('max', 767)
+			display: block
+	h1
+		+screen('max', 767)
+			margin-top: 30px
+	&__col
+		line-height: 26px
+		width: 48%
+		+screen('max', 767)
+			width: 100%
+			margin-bottom: 20px
+		&:last-of-type
+			text-align: right
+			+screen('max', 767)
+				text-align: left
+		h3
+			color: #222222
+			+fs(26px)
+			text-transform: uppercase
+			letter-spacing: 0.26px
+		iframe
+			width: 100%
+			height: 365px
+			+screen('max', 1500)
+				height: 302px
+			+screen('max', 767)
+				height: 200px
+	&__address
+		max-width: 320px
+		display: inline-block
+		margin: 15px 0
+		+screen('max', 767)
+			margin-top: 0
+		a
+			color: $color-1
+			transition: .5s ease
+			display: block
+			&:hover
+				color: $color-2
+	&__fields
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-top: 30px
+		+screen('max', 767)
+			display: block
+	&__field
+		background-color: #ffffff
+		padding: 15px 30px
+		box-sizing: border-box
+		color: #222
+		letter-spacing: 0.14px
+		+fs(14px)
+		border: 1px solid #e6e6e6
+		width: 49%
+		margin-bottom: 30px
+		+screen('max', 767)
+			width: 100%
+		&::placeholder
+			color: #cccccc
+		&::focus
+			border: 1px solid $color-2
+		&_textarea
+			resize: none
+			width: 100%
+			height: 226px
+	&__btn
+		max-width: 152px
+		text-align: center
+		margin: 0 auto
+		display: block
+		width: 100%
+	&__info
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		margin-top: 100px
+		+screen('max', 1023)
+			margin-top: 50px
+		+screen('max', 767)
+			margin-top: 30px
+			flex-wrap: wrap
+			justify-content: center
+	&__icon
+		width: 55px
+		height: 55px
+		background: $color-2
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 100%
+		margin: 0 auto 20px
+		opacity: .8
+		transition: .5s ease
+		+screen('max', 767)
+			margin-bottom: 10px
+		&:hover
+			opacity: 1
+		svg
+			height: 26px
+			fill: #fff
+	&__item
+		max-width: 230px
+		+screen('max', 767)
+			width: 100%
+			text-align: center
+			margin-bottom: 20px
+		a, p
+			color: #222222
+			letter-spacing: 0.16px
+			line-height: 26px
+			text-align: center

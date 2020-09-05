@@ -24,3 +24,20 @@ $placeholder-input: $color-1
 $border: 1px solid $color-1
 $border-hover: 1px solid $color-3
 $border-error: 2px solid $error-input
+
+%icon
+	width: 110px
+	height: 110px
+	background: $color-2
+	display: flex
+	justify-content: center
+	align-items: center
+	border-radius: 100%
+	margin: 0 auto
+	opacity: 0.8
+	transition: opacity .5s ease
+	&:hover
+		opacity: 1
+	svg
+		height: 60px
+		fill: #fff

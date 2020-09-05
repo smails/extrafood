@@ -1,2 +1,76 @@
-mixin contacts(vars)
+mixin contacts(page)
 	+b.contacts
+		if page == "index"
+			+e.inner.inner
+				+e.col
+					h3 office
+					+e.address
+						p Paseo de Gracia, 8-10, 3 planta
+							br
+							| 08007 Barcelona, España
+						a(href="tel:(34) 93 363 18 38") (34) 93 363 18 38
+						a(href="mailto:info@extrafoodstore.com") info@extrafoodstore.com
+					iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.3091102688027!2d2.1671488158539667!3d41.389092979264184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f225daafaf%3A0xbf2122134e7b38c5!2sPasseig%20de%20Gr%C3%A0cia%2C%208%2C%2008007%20Barcelona!5e0!3m2!1sen!2ses!4v1599115896591!5m2!1sen!2ses', width='100%', frameborder='0', style='border:0;', allowfullscreen='', aria-hidden='false', tabindex='0')
+				+e.col
+					h3 cellar
+					+e.address
+						p Camí de les Masses s/n.
+							br
+							| 08730 Santa Margarida i Els Monjos, España.
+						a(href="tel:(34) 938 98 00 34") (34) 938 98 00 34
+						a(href="mailto:info@barcelonawinery.com") info@barcelonawinery.com
+					iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.87691044294!2d1.6467189785209995!3d41.310202467085055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a47709edc1facf%3A0xa59b1f842e99a191!2s08730%20La%20R%C3%A0pita%2C%20Barcelona!5e0!3m2!1sen!2ses!4v1599115978802!5m2!1sen!2ses', width='100%', frameborder='0', style='border:0;', allowfullscreen='', aria-hidden='false', tabindex='0')
+		else
+			.inner
+				h1.heading-2.text-center leave us a message
+				+e.FORM.form
+					+e.fields
+						+e.INPUT.field(type="text" placeholder="Name*")
+						+e.INPUT.field(type="email" placeholder="Email Address*")
+						+e.INPUT.field(type="tel" placeholder="Telephone*")
+						+e.INPUT.field(type="text" placeholder="Subject")
+						+e.TEXTAREA.field_textarea(type="text" placeholder="Message")
+					+b.LABEL.checkbox_polit
+						+e.INPUT.hidden(type="checkbox")
+						+e.SPAN.text I have read and I accept the Data Protection Policy LOPD
+					+e.BUTTON.btn.btn send
+			.place
+				+e.inner.inner
+					+e.col
+						h3 office
+						+e.address
+							p Paseo de Gracia, 8-10, 3 planta
+								br
+								| 08007 Barcelona, España
+							a(href="tel:(34) 93 363 18 38") (34) 93 363 18 38
+							a(href="mailto:info@extrafoodstore.com") info@extrafoodstore.com
+						iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.3091102688027!2d2.1671488158539667!3d41.389092979264184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f225daafaf%3A0xbf2122134e7b38c5!2sPasseig%20de%20Gr%C3%A0cia%2C%208%2C%2008007%20Barcelona!5e0!3m2!1sen!2ses!4v1599115896591!5m2!1sen!2ses', width='100%', frameborder='0', style='border:0;', allowfullscreen='', aria-hidden='false', tabindex='0')
+					+e.col
+						h3 cellar
+						+e.address
+							p Camí de les Masses s/n.
+								br
+								| 08730 Santa Margarida i Els Monjos, España.
+							a(href="tel:(34) 938 98 00 34") (34) 938 98 00 34
+							a(href="mailto:info@barcelonawinery.com") info@barcelonawinery.com
+						iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5993.87691044294!2d1.6467189785209995!3d41.310202467085055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a47709edc1facf%3A0xa59b1f842e99a191!2s08730%20La%20R%C3%A0pita%2C%20Barcelona!5e0!3m2!1sen!2ses!4v1599115978802!5m2!1sen!2ses', width='100%', frameborder='0', style='border:0;', allowfullscreen='', aria-hidden='false', tabindex='0')
+			+e.info.inner
+				+e.item
+					+e.icon
+						svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512.076 512.076')
+							path(d='M498.639 395.039l-103.646-69.12c-13.153-8.701-30.784-5.838-40.508 6.579l-30.191 38.818a12.903 12.903 0 01-16.546 3.482l-5.743-3.166c-19.038-10.377-42.726-23.296-90.453-71.04s-60.672-71.45-71.049-90.453l-3.149-5.743a12.92 12.92 0 013.413-16.606l38.792-30.182c12.412-9.725 15.279-27.351 6.588-40.508l-69.12-103.646C108.12.056 90.25-3.966 76.461 4.323L33.12 30.358A61.136 61.136 0 005.242 66.539c-15.607 56.866-3.866 155.008 140.706 299.597 115.004 114.995 200.619 145.92 259.465 145.92a151.181 151.181 0 0040.107-5.239 61.079 61.079 0 0036.181-27.878l26.061-43.315c8.301-13.792 4.281-31.673-9.123-40.585zm-5.581 31.829l-26.001 43.341a44.103 44.103 0 01-26.027 20.173c-52.497 14.413-144.213 2.475-283.008-136.32S7.29 123.559 21.703 71.054a44.17 44.17 0 0120.198-26.061l43.341-26.001c5.983-3.6 13.739-1.855 17.604 3.959l37.547 56.371 31.514 47.266c3.774 5.707 2.534 13.356-2.85 17.579l-38.801 30.182c-11.808 9.029-15.18 25.366-7.91 38.332l3.081 5.598c10.906 20.002 24.465 44.885 73.967 94.379 49.502 49.493 74.377 63.053 94.37 73.958l5.606 3.089c12.965 7.269 29.303 3.898 38.332-7.91l30.182-38.801c4.224-5.381 11.87-6.62 17.579-2.85l103.637 69.12c5.818 3.862 7.563 11.622 3.958 17.604zM290.161 85.39c80.081.089 144.977 64.986 145.067 145.067 0 4.713 3.82 8.533 8.533 8.533s8.533-3.82 8.533-8.533c-.099-89.503-72.63-162.035-162.133-162.133-4.713 0-8.533 3.82-8.533 8.533s3.82 8.533 8.533 8.533z')
+							path(d='M290.161 136.59c51.816.061 93.806 42.051 93.867 93.867a8.533 8.533 0 0017.066 0c-.071-61.238-49.696-110.863-110.933-110.933-4.713 0-8.533 3.82-8.533 8.533s3.82 8.533 8.533 8.533z')
+							path(d='M290.161 187.79c23.552.028 42.638 19.114 42.667 42.667a8.533 8.533 0 0017.066 0c-.038-32.974-26.759-59.696-59.733-59.733-4.713 0-8.533 3.82-8.533 8.533s3.82 8.533 8.533 8.533z')
+					a(href="tel:(34) 93 363 18 38") (34) 93 363 18 38
+				+e.item
+					+e.icon
+						svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 61.168 61.168')
+							path(d='M30.938 26.584c3.859 0 7-3.141 7-7s-3.141-7-7-7-7 3.141-7 7 3.14 7 7 7zm0-12c2.757 0 5 2.243 5 5s-2.243 5-5 5-5-2.243-5-5 2.243-5 5-5z')
+							path(d='M50.216 37.584h-7.161l3.047-4.4c5.755-7.671 4.922-20.28-1.781-26.982A19.049 19.049 0 0030.761.585a19.052 19.052 0 00-13.56 5.617c-6.703 6.702-7.536 19.312-1.804 26.952l3.068 4.431h-7.513L0 60.584h61.168l-10.952-23zm-33.196-5.6c-5.199-6.933-4.454-18.32 1.596-24.369 3.244-3.244 7.558-5.031 12.146-5.031s8.901 1.787 12.146 5.031c6.05 6.049 6.795 17.437 1.573 24.399l-13.72 19.813-9.863-14.243-3.878-5.6zm-4.804 7.6h7.634l10.911 15.757 10.91-15.757h7.281l9.048 19H3.168l9.048-19z')
+					p Paseo de Gracia, 8-10, 3 planta 08007 Barcelona, España
+				+e.item
+					+e.icon
+						svg(version='1.1', xmlns='http://www.w3.org/2000/svg', x='0', y='0', viewBox='0 0 512 512', xml:space='preserve')
+							path.st0(d='M512 196.2c0-.2-.1-.3-.1-.5-.1-.6-.2-1.2-.4-1.7-.1-.5-.3-1-.5-1.5s-.5-.9-.9-1.3c-.3-.5-.7-.9-1.2-1.3-.1-.1-.2-.3-.3-.4l-82-63.7V59.7c0-14.1-11.5-25.6-25.6-25.6h-92.5l-37-28.7c-9.1-7.1-22-7.1-31.1 0l-37 28.7h-92.5c-14.1 0-25.6 11.5-25.6 25.6v66.1l-82 63.7c-.1.1-.2.3-.3.4-.4.4-.8.9-1.2 1.3-.3.4-.6.8-.9 1.3-.2.5-.4 1-.5 1.5-.2.6-.3 1.1-.3 1.7 0 .2-.1.3-.1.5v290.2c0 2.7.5 5.5 1.4 8.1-2 3-1.9 6.8.2 9.7s5.8 4.1 9.2 3.1c4.3 3.1 9.5 4.7 14.8 4.7h460.8c5.3 0 10.5-1.7 14.8-4.8.7.2 1.5.3 2.2.4 3.1 0 6-1.7 7.5-4.4s1.3-6.1-.4-8.7c.9-2.6 1.4-5.3 1.4-8.1l.1-290.2zM250.9 18.8c3-2.4 7.2-2.4 10.2 0l19.7 15.3h-49.5l19.6-15.3zM27.7 494.9l223.2-173.3c3-2.4 7.2-2.4 10.2 0l223.2 173.3H27.7zm467.2-13.3L271.5 308.1c-9.1-7.1-22-7.1-31.1 0L17.1 481.6V209.2l139.8 108.6c3.7 2.9 9.1 2.2 12-1.5s2.2-9.1-1.5-12L25.3 194l60-46.6v65.9c0 4.7 3.8 8.5 8.5 8.5s8.5-3.8 8.5-8.5V59.7c0-4.7 3.8-8.5 8.5-8.5h290.1c4.7 0 8.5 3.8 8.5 8.5v153.6c0 4.7 3.8 8.5 8.5 8.5s8.5-3.8 8.5-8.5v-65.9l60 46.6-142 110.5c-3.7 2.9-4.4 8.3-1.5 12 2.9 3.7 8.3 4.4 12 1.5L495 209.2v272.4z')
+							path.st0(d='M170.7 110.9h170.7c4.7 0 8.5-3.8 8.5-8.5s-3.8-8.5-8.5-8.5H170.7c-4.7 0-8.5 3.8-8.5 8.5s3.7 8.5 8.5 8.5zM349.9 153.6c0-4.7-3.8-8.5-8.5-8.5H170.7c-4.7 0-8.5 3.8-8.5 8.5s3.8 8.5 8.5 8.5h170.7c4.6 0 8.5-3.8 8.5-8.5zM349.9 204.8c0-4.7-3.8-8.5-8.5-8.5h-76.8c-4.7 0-8.5 3.8-8.5 8.5s3.8 8.5 8.5 8.5h76.8c4.6 0 8.5-3.8 8.5-8.5z')
+					a(href="mailto:info@extrafoodstore.com") info@extrafoodstore.com

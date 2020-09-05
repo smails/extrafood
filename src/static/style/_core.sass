@@ -35,6 +35,8 @@ main
 	margin: 0 auto
 	&_middle
 		max-width: 970px
+	+screen('max', 1500)
+		max-width: 950px
 	+screen('max', 1170)
 		padding: 0 20px
 		box-sizing: border-box
@@ -127,44 +129,45 @@ main
 			border: 1px solid #ff4657
 	&__text
 		+fs(14px)
-		padding-left: 30px
+		padding-left: 40px
 		position: relative
 		+screen('max', 767)
 			+fs(18px)
 		&::before
 			content: ''
-			width: 14px
-			height: 14px
-			border: 1px solid $color-1
+			width: 25px
+			height: 25px
+			border: 1px solid #e5e5e5
 			background-color: #ffffff
 			transition: .5s ease-in-out
 			position: absolute
 			left: 0
-			top: 0px
+			top: -5px
 		&:hover
 			&::before
 				border: 1px solid $color-1
 		&:after
 			content: ''
-			height: 10px
-			width: 10px
-			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAYAAAAxrNxjAAAAhUlEQVQoU32Pyw2DMBBE316gnVxjcXAJpAKSCmhhO4AOoISUgKUonOmECmKEMUEmUua2s2/2I/yT0QuehpybBK5Qy0uHJGP0DnTRc8Jh9Lz1ERopNPGhFK7aI1Qx+cTjEJpYT2RYBp231UZboD6d+4VWfwN/1zkyynXS3j7AHfZYxvBIogUWZiYqLZLcWQAAAABJRU5ErkJggg==)
+			height: 15px
+			width: 19px
+			background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAYAAAAGRPQsAAAByElEQVQ4T6WTPWhTURTHfycfJXWwxLxg1W46qlu3DsGkqR+8PKq0FYeugm5OTi5OTq7iKAqS0tK+SCRtXgt20EEEd111yKsFBVuSvHfkBvp4xjRiveP5n/O755z/vcJ/nLX8zDm0+xJJ3XRajU9yVFb9RGGim0i9A84IfE6G3cKRYMvWzKkRgm2Fs7FmPvwzrD5+Jd8NOpso5w9AAp1AuRrBzG03/MbXYWNXs6WxTJINYDKWFyhy3fE33B6sZpVtJawqsmCCg4C10/Yxbe81gKmYHgq6aPveCxMTN1e+hISvgFHTbhjqNeebZ26PTpW5kYy1WweK8biitx3fexqN61qlj8DFWNKeSuKy01p/Y2JbFFI/rOQKiN3X8b2K33wcj4mxuJNIvxV0IiZ8DzVRbu+Mvc9Yu8+AW30dPXB872H/Ono7M49PNNgGxmMJPqpbiMz9ViQ8qrSa9wftNXJz9WTpQiJgE7AOc1ThScVv3hHQoTAjurniJCJN4Pifyfrc9r3Fw0A9N/uL3HxpCmXduBtpyvL+TnZhnqVg2Dsc+ANquekioq8V0kB938/OzrPUHgYa2NlBwZo1XRHRu5IenbW/1H7+DWT0X9idmlZoHf4rAAAAAElFTkSuQmCC)
 			background-position: center
 			background-repeat: no-repeat
 			background-size: contain
 			position: absolute
-			left: 3px
-			top: 3px
+			left: 5px
+			top: 2px
 			opacity: 0
 			transition: .5s ease-in-out
 	&_polit
 		display: flex
 		justify-content: space-between
 		align-items: flex-start
-		margin: 30px 0 20px
+		margin-bottom: 50px
+		margin-left: 0
 		.checkbox__text
-			color: rgba(0,0,0,.5)
-			+fs(12px)
+			color: #999999
+			+fs(15px)
 			line-height: 14px
 .select2-container
 	width: 100%
@@ -231,33 +234,76 @@ main
 	background: $color-2
 	box-sizing: border-box
 	padding: 15px 15px 14px
-	color: #ffffff
+	color: #ffffff!important
 	+fs(14px)
 	font-weight: 500
 	line-height: 24px
 	text-transform: uppercase
 	letter-spacing: 0.35px
 	position: relative
+	border-radius: 2px
+	transition: .5s ease
 	&_link
 		width: 150px
 		position: relative
 		display: flex
 		justify-content: center
 		align-items: center
+		padding: 10px 10px 9px
 		&::after
-			content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAHCAYAAADam2dgAAAAVklEQVQoU2P8////AgYGhgJGRsYPDFDw////BgYGhg2MjIwXQEKM////F2BgYJiARSFIbAFIISNIJUGFSFYoMDAwNDAyMibAxKAGHCDOJIJWgdxEjO8AoCxCH4pv0B8AAAAASUVORK5CYII=)
+			content: ''
 			display: inline-block
 			vertical-align: middle
 			margin-left: 10px
 			position: relative
 			top: -1px
+			width: 9px
+			height: 7px
+			background-image: url(../icon/arrow-right.svg)
+			background-position: center
+			background-repeat: no-repeat
+	&:hover
+		color: #fff!important
+		background: rgba(178, 20, 68, .8)
 table
 
-.swiper-button-prev
-.swiper-button-next
-
+.content
+	iframe
+		margin-top: 50px
+		+screen('max', 767)
+			height: 200px
+	& + .gallery
+		margin-top: 40px
+.pic
+	+screen('max', 1500)
+		height: 355px
+		object-fit: cover
 .breadcrumb
-
+	padding: 30px 125px
+	+screen('max', 1170)
+		padding: 20px 50px
+	+screen('max', 1023)
+		padding: 20px 20px 0
+	&__link
+		margin-right: 20px
+		a
+			color: #222222
+			+fs(14px)
+			letter-spacing: 0.7px
+			text-transform: uppercase
+			transition: .5s ease
+			&:hover
+				color: $color-2
+		&:after
+			content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAKCAYAAAB8OZQwAAAAeklEQVQYV2NkYGBgZGBg+M+ABBiVlJSOMjIy1t69e3cfTBwkyP////8NTExMzTAJkFYGdAmwIJpELlwQKpHBwMDAgawymoGBIYGJickHZiZY4MePH/7Pnj37BrIdJBDCxMQUcefOnZ8gYxiVlZUD7t69u5mBgeEvzFIAd90u6ZrBIHkAAAAASUVORK5CYII=)
+			position: relative
+			margin-left: 10px
+	&__active
+		a
+			color: $color-2
+			+fs(14px)
+			letter-spacing: 0.7px
+			text-transform: uppercase
 .social
 
 .group
@@ -311,3 +357,63 @@ table
 	cursor: pointer
 	+screen('max', 1280)
 		display: none
+
+.scheme
+	padding: 150px 0
+	background-color: #f6f6f2
+	+screen('max', 1500)
+		padding: 95px 0
+	+screen('max', 1023)
+		padding: 50px 0
+	&__pic
+		width: 100%
+.gallery
+	&__inner
+		display: flex
+		align-items: center
+		+screen('max', 767)
+			display: block
+	&__item
+		display: block
+		max-width: 400px
+		width: 33%
+		margin-right: 13px
+		+screen('max', 767)
+			width: 100%
+		&:nth-of-type(3n)
+			margin-right: 0
+	&__pic
+		width: 100%
+		height: 275px
+		object-fit: cover
+		+screen('max', 1500)
+			height: 220px
+.bottle
+	margin-bottom: 100px
+	.swiper-slide
+		text-align: center
+	.swiper-wrapper
+		margin-top: 30px
+	&__pic
+		width: 110px
+	.swiper-button-prev
+		left: 0px
+	.swiper-button-next
+		right: 2px
+	.swiper-button-prev,
+	.swiper-button-next
+		background-image: none
+		margin-top: 0
+		svg
+			width: 29px
+			height: 29px
+		path
+			fill: #cccccc
+			transition: .5s ease
+		&:hover
+			path
+				fill: $color-2
+
+.cellar-map
+	margin-bottom: 60px
+	margin-top: -55px

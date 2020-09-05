@@ -1,0 +1,51 @@
+.text-block
+	padding: 125px 0
+	+screen('max', 1170)
+		padding: 70px 0
+	+screen('max', 1023)
+		padding: 40px 0 50px
+	&_pt20
+		padding-top: 20px
+	&_p10
+		padding: 10px 0
+	&_p40
+		padding: 40px 0
+	&_pic
+		.text-block__pic
+			+screen('max', 1500)
+				max-height: 322px
+				flex-shrink: 0
+	&__inner
+		display: flex
+		align-items: center
+		+screen('max', 1023)
+			flex-wrap: wrap
+		&_reverse
+			flex-flow: row-reverse
+			.text-block__content
+				margin-left: 0
+				margin-right: 3%
+				+screen('max', 1023)
+					margin-right: 0
+	&__content
+		margin-left: 3%
+		+screen('max', 1023)
+			margin-left: 0
+		h2
+			line-height: 1.35
+	&__pic
+		max-width: 575px
+		object-fit: cover
+		min-height: 420px
+		+screen('max', 1500)
+			width: 450px
+			min-height: 332px
+		+screen('max', 1023)
+			width: 100%
+			height: 250px
+			min-height: 250px
+			order: -1
+			max-width: 100%
+		+screen('max', 767)
+			height: 150px
+			min-height: 150px

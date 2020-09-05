@@ -1,0 +1,51 @@
+.features
+	margin-top: 80px
+	+screen('max', 767)
+		margin-top: 30px
+	&__list
+		display: flex
+		justify-content: space-between
+		align-items: center
+		+screen('max', 767)
+			flex-wrap: wrap
+			justify-content: space-around
+	&__item
+		text-align: center
+		max-width: 250px
+		position: relative
+		+screen('max', 767)
+			margin-bottom: 20px
+		&:first-of-type
+			top: 200px
+			+screen('max', 767)
+				top: 0
+		&:nth-of-type(2)
+			left: -50px
+			+screen('max', 767)
+				left: 0
+		&:nth-of-type(3)
+			right: -50px
+			+screen('max', 767)
+				right: 0
+		&:nth-of-type(4)
+			top: 200px
+			+screen('max', 767)
+				top: 0
+	&__pic
+		@extend %icon
+	&__title
+		color: #222222
+		+fs(20px)
+		text-transform: uppercase
+		margin: 20px 0 10px
+	&__text
+		line-height: 26px
+	&__bottle
+		margin: 0px auto
+		display: block
+		height: 500px
+		position: relative
+		top: -70px
+		z-index: -1
+		+screen('max', 767)
+			top: 0

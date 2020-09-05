@@ -1,70 +1,55 @@
 mixin newsall(vars)
-	+b.news.after-page-title
-		.inner.news__inner
-			.tags.mobile
-				a(href="#").tag.tag_link.tag_white 2019
-				a(href="#").tag.tag_link.tag_white 2020
-				a(href="#").tag.tag_link.tag_white 2019
-			+e.list
-				+e.A.item
-					+e.content
-						span.tag.tag_blue Новости компании
-						+e.H6.title Уважаемые клиенты! Разработано и освоено производство новых видов шинорейки (шина монтажная) № 20 и № 30
-						+e.SPAN.date 20.01.2020
-					+e.IMG.pic(src="/images/stub-news-1.png")
-				+e.A.item
-					+e.content
-						span.tag.tag_blue Новости компании
-						+e.H6.title Компания НЗМИ информирует своих клиентов о возможности размещения заявок
-						+e.SPAN.date 20.01.2020
-					+e.IMG.pic(src="/images/stub-news-2.png")
-				+e.A.item
-					+e.content
-						span.tag.tag_blue Новости компании
-						+e.H6.title Искусство медиапланирования настроено позитивно.
-						+e.SPAN.date 20.01.2020
-					+e.IMG.pic(src="/images/stub-news-3.png")
-				+e.A.item
-					+e.content
-						span.tag.tag_blue Новости компании
-						+e.H6.title Уважаемые клиенты! Разработано и освоено производство новых видов шинорейки (шина монтажная) № 20 и № 30
-						+e.SPAN.date 20.01.2020
-					+e.IMG.pic(src="/images/stub-news-1.png")
-				+e.A.item
-					+e.content
-						span.tag.tag_blue Новости компании
-						+e.H6.title Компания НЗМИ информирует своих клиентов о возможности размещения заявок
-						+e.SPAN.date 20.01.2020
-					+e.IMG.pic(src="/images/stub-news-2.png")
-				+e.A.item
-					+e.content
-						span.tag.tag_blue Новости компании
-						+e.H6.title Искусство медиапланирования настроено позитивно.
-						+e.SPAN.date 20.01.2020
-					+e.IMG.pic(src="/images/stub-news-3.png")
-			+e.sidebar
-				.tags
-					h3 Год
-					a(href="#").tag.tag_link.tag_white 2019
-					a(href="#").tag.tag_link.active.tag_white 2020
-					a(href="#").tag.tag_link.tag_white 2019
-				.tags
-					h3 Теги
-					a(href="#").tag.tag_link.tag_white Новости компании
-					a(href="#").tag.tag_link.tag_white Новости компании
-					a(href="#").tag.tag_link.tag_white Новости компании
-					a(href="#").tag.tag_link.tag_white Новости
-	+b.pagination
-		+e.UL.list
-			+e.LI.item
-				+e.A.link(href="#") 1
-			+e.LI.item
-				+e.A.link(href="#") 2
-			+e.LI.item
-				+e.A.link(href="#").active 3
-			+e.LI.item
-				+e.A.link(href="#") 4
-			+e.LI.item
-				+e.A.link(href="#") ...
-			+e.LI.item
-				+e.A.link(href="#") 20  
+	+b.news
+		+e.inner.inner
+			+e.item_big
+				+e.pic
+					img(src="/images/article_1.jpg", alt="")
+					+e.date_big 03
+						span SEP
+				+e.content
+					+e.H2.title Title name
+					+e.P.text.text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
+				+e.meta
+					+e.P.post Post by
+						b Name Surname
+					+e.A.link_big(href="/news-single.html") Read more
+			+e.item
+				+e.pic
+					img(src="/images/article_2.jpg", alt="")
+					+e.date 03
+						span SEP
+				+e.content
+					+e.H2.title Title name
+					+e.P.text.text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+				+e.meta
+					+e.A.link(href="/news-single.html") Read more
+			+e.item
+				+e.pic
+					img(src="/images/article_3.jpg", alt="")
+					+e.date 03
+						span SEP
+				+e.content
+					+e.H2.title Title name
+					+e.P.text.text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+				+e.meta
+					+e.A.link(href="/news-single.html") Read more
+			+e.item
+				+e.pic
+					img(src="/images/artlicle_4.jpg", alt="")
+					+e.date 03
+						span SEP
+				+e.content
+					+e.H2.title Title name
+					+e.P.text.text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+				+e.meta
+					+e.A.link(href="/news-single.html") Read more
+			+e.item
+				+e.pic
+					img(src="/images/artlicle_5.jpg", alt="")
+					+e.date 03
+						span SEP
+				+e.content
+					+e.H2.title Title name
+					+e.P.text.text Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+				+e.meta
+					+e.A.link(href="/news-single.html") Read more

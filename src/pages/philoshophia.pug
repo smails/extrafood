@@ -1,0 +1,20 @@
+include ../static/pug/_global
+<!DOCTYPE html>
+html(lang="ru")
+	+head('Философия')
+	body
+		main.page
+			+header()
+			+heading('/images/heading_philos.jpg', ["Company","OUR PHILOSOPHY"], 'OUR PHILOSOPHY')
+			.content
+				.inner
+					.text
+						h2 Our mission and vision
+						p Barcelona Mediterranean Wine is a modern brand of Mediterranean wines and an exquisite combination of centuries-old traditions and cutting edge technology. Throughout the years of winemaking experience, we have created a unique portfolio of high-quality wines. 
+						p Spain is dotted with various vineyards. For our bodegas we picked the best locations taking into account the climate and soil features, and grape varieties to offer diversity of choice for our consumers. 
+						p Our wine is a product of fresh ideas and tireless work of reputable masters, carefully preserving traditions and creatively using the technical capabilities of modern winemaking. The excellent quality of our wines can be felt in every drop. By taking the utmost care through each step of the winemaking process, we seek to make delicious, interesting, and balanced wines.
+			+features()
+			+text('phil-top')
+			+text('phil-bottom')
+			+footer()
+		include ../static/pug/_scripts
